@@ -31,12 +31,15 @@ app.engine(
 
 // fin de la configuracion del motor 
 
-
-
 app.get('/products', async (req, res) => {
   //sirve productslist.hbs en index.hbs (index.hbs es la plantilla por defecto donde arranca todo)
   const products = await container.getAll()
-  res.render('productslist', { products: products, productsExist: true });
+  if (products) {
+    res.render('productslist', { products: products, productsExist: true });
+  } else{
+    res.render('emptyList')
+  }
+  
   
 });
 

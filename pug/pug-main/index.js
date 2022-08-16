@@ -23,7 +23,12 @@ app.set('views', './views');
 
 app.get('/products', async (req, res) => {
   const products = await container.getAll()
-  res.render('products.pug', { title: 'listado', products: products });
+  if (products) {
+    res.render('products.pug', { title: 'listado', products: products });
+  } else{
+    res.render('emptyList.pug');
+  }
+  
 });
 
 

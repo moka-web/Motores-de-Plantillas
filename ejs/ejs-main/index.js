@@ -14,12 +14,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.set('view engine', 'ejs');
-//no se aclara donde estan las carpetas 
+
 
 
 app.get('/products', async (req, res) => {
   const productos = await container.getAll()
-  res.render('pages/products', { title: 'listado de productos', products: productos }); //funca
+   
+  if(productos){
+    res.render('pages/products', { title: 'listado de productos', products: productos });
+  } else {
+    res.render('pages/emptyList')
+  }
+   
 });
 
 app.get('/products/:id', (req, res) => {
