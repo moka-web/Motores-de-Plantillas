@@ -1,0 +1,14 @@
+[
+  {
+    "title": "holas",
+    "price": "100000",
+    "thumbnail": "https://cdna.artstation.com/p/assets/images/images/046/235/272/smaller_square/pixel-arts-de-un-nino-random-ranita-uwu.jpg?1644605499",
+    "id": 1
+  },
+  {
+    "title": "culopatin villero",
+    "price": "984",
+    "thumbnail": "https://inta.gob.ar/sites/default/files/288-cyanoliseus-patagonicus.jpg",
+    "id": 2
+  }
+]
